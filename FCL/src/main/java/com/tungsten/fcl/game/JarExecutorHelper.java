@@ -50,7 +50,7 @@ public class JarExecutorHelper {
 
     private static void launchJarExecutor(Context context, File file) {
         int version = getJavaVersion(file);
-        int javaVersion = "17";
+        int javaVersion = getNearestJavaVersion(version);
         JarExecutorLauncher launcher = new JarExecutorLauncher(context);
         launcher.setInfo(file.getAbsolutePath(), javaVersion);
         try {
