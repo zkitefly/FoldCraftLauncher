@@ -71,7 +71,7 @@ public class JarExecutorHelper {
 
     private static int getNearestJavaVersion(int majorVersion) {
         if (majorVersion == -1)
-            return 8;
+            return 17;
         int diffFactorFirst = Math.abs(8 - majorVersion);
         int diffFactorSecond = Math.abs(17 - majorVersion);
         return diffFactorFirst < diffFactorSecond ? 8 : 17;
